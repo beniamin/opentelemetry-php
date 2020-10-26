@@ -32,9 +32,6 @@ class Tracer implements API\Tracer
         $this->importedContext = $context;
     }
 
-    /**
-     * @return Span
-     */
     public function getActiveSpan(): API\Span
     {
         while (count($this->tail) && $this->active->getEnd()) {
